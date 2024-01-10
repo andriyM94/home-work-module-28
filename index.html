@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hom Work JS</title>
+</head>
+<body>
+  <h1>Home Work JS moodul 28</h1>
+
+  <!-- Умова домашнього завдання -->
+  <div style="font-weight: bold;">
+    <p>Напишіть код, щоб вибрати елемент з атрибутом data-widget-name з документа
+      та прочитати його значення.</p>
+  
+    <p>&lt;!DOCTYPE html&gt;</p>
+    <p>&lt;html&gt;</p>
+    <p>&emsp;&lt;body&gt;</p>
+    <p>&emsp;&emsp;&lt;div data-widget-name="menu"&gt;Виберіть жанр	&lt;/div&gt;</p>
+    <p>&emsp;&emsp;&lt;script&gt;/* ваш код */	&lt;/script&gt;</p>
+    <p>&emsp;&lt;/body&gt;</p>
+    <p>&lt;/html&gt;</p>
+  </div>
+
+  <!-- Результати -->
+  <div class="result" style="background-color: gainsboro;">
+    <h2>Результати</h2>
+    <p id="result_attr">Значення атрибута 'data-widget-name' - <b></b></p>
+    <p id="result_value">Значення атрибута 'data-widget-name' - <b></b></p>
+  </div>
+
+
+
+  <!-- Елемент який інспектується -->
+  <div data-widget-name="menu">Виберіть жанр</div>
+  <!-- Код виконання для домашнього завдання -->
+  <script>
+    const element = document.querySelector('[data-widget-name]');
+    const elementAttrValue = element.getAttribute('data-widget-name');
+    const elementValue = element.innerText;
+ 
+    const resultAttr = document.getElementById('result_attr');
+    console.log(elementAttrValue);
+    resultAttr.lastChild.innerText = elementAttrValue;
+
+    const resultValue = document.getElementById('result_value');
+    console.log(elementValue);
+    resultValue.lastChild.innerText = elementValue;
+  </script>
+
+</body> 
+</html>
